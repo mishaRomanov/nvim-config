@@ -69,4 +69,9 @@ return {
     "github/copilot.vim",
     lazy = false,
   },
+  {
+    "folke/todo-comments.nvim",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    lazy = false,
+  },
 }
