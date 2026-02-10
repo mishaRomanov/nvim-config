@@ -138,4 +138,9 @@ return {
     },
     lazy = false,
   },
+  -- Delve debugger.
+  {
+    "sebdah/vim-delve",
+    lazy = false,
+  },
 }

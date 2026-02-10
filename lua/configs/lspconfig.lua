@@ -1,8 +1,9 @@
 require("nvchad.configs.lspconfig").defaults()
 
-local servers = { "html", "cssls", "clangd", "gopls" }
+local servers = { "html", "cssls", "clangd", "gopls", "basedpyright" }
 vim.lsp.enable(servers)
 vim.lsp.enable "rust_analyzer" -- For some reason it doesn't load if included in servers list. So i do it manually.
+vim.lsp.enable "basedpyright" -- Custom pyright server with some settings.
 local map_key = vim.keymap.set
 
 map_key("n", "gI", vim.lsp.buf.implementation, nil)
