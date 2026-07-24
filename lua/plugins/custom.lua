@@ -17,8 +17,9 @@ return {
           fish = { "fish_indent" },
           sh = { "shfmt" },
           rust = { "rustfmt" },
-          python = { "isort", "black" },
+          python = { "black" },
           go = { "goimports", "goimports-reviser", "gofumpt", "golines" },
+          nginx = { "nginx-config-formatter" },
           c = { "clang-format" },
         },
       }
@@ -67,6 +68,17 @@ return {
   --
   {
     "github/copilot.vim",
+    lazy = false,
+  },
+  {
+    "CopilotC-Nvim/CopilotChat.nvim",
+    dependencies = {
+      { "nvim-lua/plenary.nvim", branch = "master" },
+    },
+    build = "make tiktoken",
+    opts = {
+      -- See Configuration section for options
+    },
     lazy = false,
   },
   {
